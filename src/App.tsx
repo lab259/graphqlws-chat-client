@@ -17,6 +17,7 @@ const wsLink = new WebSocketLink({
   uri: "ws://graphql.local.lab259.rocks/subscriptions",
   options: {
     reconnect: true,
+    lazy: true,
     connectionParams: () => {
       const currentUser = localStorage.getItem(STORAGE.CURRENT_USER);
       return {
