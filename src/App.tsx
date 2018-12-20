@@ -10,11 +10,11 @@ import Chat from "./Chat";
 import { STORAGE } from "./constants";
 
 const httpLink = new HttpLink({
-  uri: "http://graphql.local.lab259.rocks/graphql"
+  uri: "http://localhost:8085/graphql"
 });
 
 const wsLink = new WebSocketLink({
-  uri: "ws://graphql.local.lab259.rocks/subscriptions",
+  uri: "ws://localhost:8085/subscriptions",
   options: {
     reconnect: true,
     lazy: true,
